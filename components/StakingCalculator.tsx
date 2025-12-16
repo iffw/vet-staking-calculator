@@ -12,7 +12,7 @@ interface EarningsBreakdown {
 
 export default function StakingCalculator() {
   const [vetAmount, setVetAmount] = useState<string>('10000');
-  const [selectedAPY, setSelectedAPY] = useState<number>(2.5);
+  const [selectedAPY, setSelectedAPY] = useState<number>(1.63);
   const [vetPrice, setVetPrice] = useState<number | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [earnings, setEarnings] = useState<EarningsBreakdown>({
@@ -23,12 +23,13 @@ export default function StakingCalculator() {
     yearly: 0,
   });
 
-  // APY options from different platforms
+  // APY options from different platforms (Updated with verified rates - Dec 2025)
   const apyOptions = [
-    { platform: 'Binance', apy: 2.5 },
-    { platform: 'Bybit', apy: 2.3 },
-    { platform: 'VeChainThor Wallet', apy: 1.8 },
-    { platform: 'Custom', apy: 0 },
+    { platform: 'Binance', apy: 1.63, note: 'Verified' },
+    { platform: 'VeChain StarGate', apy: 1.5, note: 'Official Program' },
+    { platform: 'Bybit Earn', apy: 1.2, note: 'Estimated' },
+    { platform: 'VeChainThor Wallet (Base VTHO)', apy: 0.5, note: 'Base Rate' },
+    { platform: 'Custom', apy: 0, note: '' },
   ];
 
   // Fetch VET price from CoinGecko
@@ -131,7 +132,7 @@ export default function StakingCalculator() {
           >
             {apyOptions.map((option) => (
               <option key={option.platform} value={option.apy}>
-                {option.platform} {option.apy > 0 ? `(${option.apy}% APY)` : ''}
+                {option.platform} {option.apy > 0 ? `(${option.apy}% APY)` : ''} {option.note && `- ${option.note}`}
               </option>
             ))}
           </select>
@@ -228,9 +229,14 @@ export default function StakingCalculator() {
 
       {/* Disclaimer */}
       <div className="mt-6 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
-        <p className="text-sm text-yellow-800">
-          <strong>Note:</strong> These calculations are estimates based on the current APY rates.
-          Actual earnings may vary depending on network conditions and platform policies.
+        <p className="text-sm text-yellow-800 mb-2">
+          <strong>⚠️ Important Disclaimer:</strong> APY rates are estimates and subject to change.
+          Always verify current rates on the platform's official website before staking.
+        </p>
+        <p className="text-xs text-yellow-700">
+          <strong>Data Sources:</strong> Binance.com, VeChain.org, Stakingrewards.com |
+          <strong> Last Updated:</strong> December 2025 |
+          <strong> Base VTHO Rate:</strong> 0.000432 VTHO/VET/day
         </p>
       </div>
     </div>

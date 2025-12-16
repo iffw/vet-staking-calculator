@@ -14,39 +14,39 @@ export default function PlatformComparison() {
   const platforms: Platform[] = [
     {
       name: 'Binance',
-      apy: '2.5%',
+      apy: '1.63%',
       minStake: '1 VET',
       lockPeriod: 'Flexible',
-      features: ['Auto-compound', 'Easy withdrawal', 'High liquidity'],
+      features: ['Verified APY', 'Easy withdrawal', 'High liquidity', 'VTHO rewards'],
       rating: 4.8,
-      url: 'https://www.binance.com',
+      url: 'https://www.binance.com/en/earn/VET',
     },
     {
-      name: 'Bybit',
-      apy: '2.3%',
-      minStake: '1 VET',
-      lockPeriod: 'Flexible',
-      features: ['No lock period', 'Daily rewards', 'Mobile app'],
-      rating: 4.6,
-      url: 'https://www.bybit.com',
-    },
-    {
-      name: 'VeChainThor Wallet',
-      apy: '1.8%',
-      minStake: 'No minimum',
-      lockPeriod: 'None',
-      features: ['Full control', 'VTHO generation', 'Official wallet'],
-      rating: 4.7,
+      name: 'VeChain StarGate',
+      apy: '1.5%+',
+      minStake: '10,000 VET',
+      lockPeriod: 'Tiered',
+      features: ['Official program', '$15M bonus pool', 'Lower entry (10K VET)', 'VTHO generation'],
+      rating: 4.9,
       url: 'https://www.vechain.org',
     },
     {
-      name: 'Crypto.com',
-      apy: '2.0%',
-      minStake: '5000 VET',
-      lockPeriod: '1-3 months',
-      features: ['CRO cashback', 'Higher tiers available', 'Insured'],
-      rating: 4.5,
-      url: 'https://crypto.com',
+      name: 'Bybit Earn',
+      apy: '~1.2%',
+      minStake: '1 VET',
+      lockPeriod: 'Flexible',
+      features: ['Flexible staking', 'Daily rewards', 'Mobile app', 'Multiple earn products'],
+      rating: 4.6,
+      url: 'https://www.bybit.com/en/earn/',
+    },
+    {
+      name: 'Base VTHO Generation',
+      apy: '~0.5%',
+      minStake: 'No minimum',
+      lockPeriod: 'None',
+      features: ['Automatic VTHO', 'Any wallet', 'Self-custody', 'No platform fees'],
+      rating: 4.7,
+      url: 'https://www.vechain.org',
     },
   ];
 
@@ -236,9 +236,12 @@ export default function PlatformComparison() {
             <h4 className="text-sm font-semibold text-blue-900 mb-1">
               Important Information
             </h4>
-            <p className="text-sm text-blue-800">
+            <p className="text-sm text-blue-800 mb-2">
               APY rates are subject to change. Always verify current rates on the platform's official website
               before staking. Consider factors like platform security, reputation, and your own investment goals.
+            </p>
+            <p className="text-xs text-blue-700 mt-2">
+              <strong>Sources:</strong> Binance.com, VeChain.org, Bybit.com | <strong>Updated:</strong> Dec 2025
             </p>
           </div>
         </div>
