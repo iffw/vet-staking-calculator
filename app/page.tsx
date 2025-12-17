@@ -12,7 +12,7 @@ export default function Home() {
     "name": "VET Staking Calculator",
     "applicationCategory": "FinanceApplication",
     "description": "Calculate your VeChain (VET) staking rewards with real-time data and compare top staking platforms.",
-    "url": "https://vet-staking-calculator.vercel.app",
+    "url": "https://www.vetstakingcalculator.com",
     "offers": {
       "@type": "Offer",
       "price": "0",

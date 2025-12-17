@@ -35,14 +35,14 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://vet-staking-calculator.vercel.app'),
+  metadataBase: new URL('https://www.vetstakingcalculator.com'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     title: 'VET Staking Calculator 2025 | Calculate VeChain Staking Rewards',
     description: 'Calculate your VeChain (VET) staking rewards with real-time data. Compare top VET staking platforms and maximize your earnings.',
-    url: 'https://vet-staking-calculator.vercel.app',
+    url: 'https://www.vetstakingcalculator.com',
     siteName: 'VET Staking Calculator',
     locale: 'en_US',
     type: 'website',
