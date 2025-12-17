@@ -89,6 +89,14 @@ export default function Home() {
                 <p className="text-sm text-gray-500">Calculate your VET staking rewards</p>
               </div>
             </div>
+            <nav className="hidden md:flex items-center space-x-6">
+              <a href="/blog" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+                Blog
+              </a>
+              <a href="/about" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+                About
+              </a>
+            </nav>
           </div>
         </div>
       </header>
